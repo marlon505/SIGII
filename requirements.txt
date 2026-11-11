@@ -1,0 +1,8 @@
+PySide6
+mysql-connector-python
+bcrypt
+python-dotenv
+SQLAlchemy
+openpyxl
+reportlab
+requests

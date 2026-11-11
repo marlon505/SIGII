@@ -1,0 +1,874 @@
+/* resources/styles.qss */
+QMainWindow {
+    background-color: #FFFFFF;
+}
+
+QPushButton {
+    background-color: #1E3A8A;
+    color: #FFFFFF;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #16306e;
+}
+
+QPushButton:disabled {
+    background-color: #E5E7EB;
+    color: #4B5563;
+    border: 1px solid #CBD5E1;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #FFFFFF;
+    color: #1F2937;
+    selection-background-color: #DBEAFE;
+    selection-color: #1E3A8A;
+    border: 1px solid #CBD5E1;
+    outline: 0;
+}
+
+QComboBox QAbstractItemView::item {
+    min-height: 28px;
+    padding: 5px 10px;
+}
+
+QComboBox QAbstractItemView::item:hover {
+    background-color: #EFF6FF;
+    color: #1E3A8A;
+}
+
+QWidget#registrarIncidenciaForm QComboBox,
+QWidget#registrarIncidenciaForm QDateEdit {
+    background-color: #FFFFFF;
+    color: #1F2937;
+    border: 1px solid #CBD5E1;
+    border-radius: 6px;
+    padding: 6px 10px;
+    min-height: 22px;
+}
+
+QWidget#registrarIncidenciaForm QComboBox:hover,
+QWidget#registrarIncidenciaForm QDateEdit:hover {
+    border-color: #64748B;
+}
+
+QWidget#registrarIncidenciaForm QComboBox:focus,
+QWidget#registrarIncidenciaForm QDateEdit:focus {
+    border: 2px solid #3B82F6;
+}
+
+QWidget#registrarIncidenciaForm QComboBox QAbstractItemView {
+    background-color: #FFFFFF;
+    color: #1F2937;
+    selection-background-color: #DBEAFE;
+    selection-color: #1E3A8A;
+}
+
+/* Acción principal del dashboard Maestro: neutro y consistente con la interfaz. */
+QPushButton#botonRegistrarIncidencia {
+    background-color: #FFFFFF;
+    color: #1E3A8A;
+    border: 1px solid #D1D5DB;
+    border-radius: 20px;
+    padding: 9px 20px;
+    font-weight: bold;
+}
+
+QPushButton#botonRegistrarIncidencia:hover {
+    background-color: #F3F4F6;
+    border-color: #94A3B8;
+}
+
+QPushButton#botonRegistrarIncidencia:pressed {
+    background-color: #E5E7EB;
+}
+
+QLabel[error="true"] {
+    color: #DC2626;
+}
+
+QLabel[secondary="true"] {
+    color: #6B7280;
+}
+
+QLineEdit[error="true"] {
+    border: 2px solid #DC2626;
+}
+
+QLabel {
+    color: #1E3A8A;
+}
+
+#loginCard {
+    background-color: rgba(30, 58, 138, 0.55);
+    border-radius: 16px;
+}
+
+#loginTitulo {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    background: transparent;
+}
+
+#loginSubtitulo {
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 13px;
+    font-weight: 500;
+    background: transparent;
+    margin-top: -6px;
+    margin-bottom: 4px;
+}
+
+QLineEdit {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 18px;
+    padding: 10px 16px;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+}
+
+QLineEdit::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#botonPrincipal {
+    background-color: white;
+    color: #1E3A8A;
+    border-radius: 18px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+#linkLabel {
+    color: white;
+    background: transparent;
+}
+
+QCheckBox {
+    color: white;
+    background: transparent;
+}
+
+#fondoLogin {
+    background-image: url(resources/recinto.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#fondoLogin_recuperar {
+    background-image: url(resources/recinto_2.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+QWidget#loginWidget {
+    background-color: #FFFFFF;
+}
+
+QPushButton#btnLogin {
+    background-color: #1E3A8A;
+    color: #FFFFFF;
+    border-radius: 6px;
+    padding: 8px 16px;
+}
+
+QPushButton#btnLogin:hover {
+    background-color: #16305e;
+    /* variante más oscura, feedback visual */
+}
+
+QLineEdit {
+    border: 1px solid #6B7280;
+    border-radius: 4px;
+    padding: 6px;
+}
+
+QLineEdit:focus {
+    border: 1px solid #1E3A8A;
+}
+
+/* Colores de estado - se aplican via setProperty(), ver paso 6 */
+QLabel[estado="pendiente"] {
+    background-color: #3B82F6;
+    color: white;
+    border-radius: 4px;
+    padding: 2px 8px;
+}
+
+QLabel[estado="confirmado"] {
+    background-color: #16A34A;
+    color: white;
+    border-radius: 4px;
+    padding: 2px 8px;
+}
+
+QLabel[estado="en_reparacion"] {
+    background-color: #D4A017;
+    color: white;
+    border-radius: 4px;
+    padding: 2px 8px;
+}
+
+QLabel[estado="resuelto"] {
+    background-color: #6B7280;
+    color: white;
+    border-radius: 4px;
+    padding: 2px 8px;
+}
+
+QLabel[estado="reabierto"] {
+    background-color: #DC2626;
+    color: white;
+    border-radius: 4px;
+    padding: 2px 8px;
+}
+
+/* ---------- Scrollbar moderno para Dashboards ---------- */
+QScrollArea#dashboardScroll {
+    background-color: transparent;
+    border: none;
+}
+
+QScrollArea#dashboardScroll > QWidget > QWidget {
+    background-color: transparent;
+}
+
+QScrollBar:vertical {
+    border: none;
+    background: #F1F5F9;
+    width: 8px;
+    margin: 0px 0px 0px 0px;
+    border-radius: 4px;
+}
+
+QScrollBar::handle:vertical {
+    background: #CBD5E1;
+    min-height: 25px;
+    border-radius: 4px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #94A3B8;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+/* ---------- Barra superior ---------- */
+QFrame#barra_superior {
+    background-color: #1E3A8A;
+    border-radius: 10px;
+    padding: 8px 16px;
+    margin-bottom: 4px;
+}
+
+QLabel#titulo_dashboard {
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+QPushButton#boton_cerrar_sesion {
+    background-color: transparent;
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 6px;
+    padding: 8px 18px;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+QPushButton#boton_cerrar_sesion:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+QPushButton#botonSalirModoVista {
+    background-color: #FFFFFF;
+    color: #1E3A8A;
+    border: 1px solid #FFFFFF;
+    border-radius: 6px;
+    padding: 7px 16px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+QPushButton#botonSalirModoVista:hover {
+    background-color: #DBEAFE;
+    color: #1E3A8A;
+    border-color: #DBEAFE;
+}
+
+QPushButton#botonSalirModoVista:pressed {
+    background-color: #BFDBFE;
+    color: #1E3A8A;
+}
+
+/* ---------- Tarjetas (las 5 secciones del Dashboard) ---------- */
+QFrame#frame_resumen_laboratorios,
+QFrame#frame_resumen_equipos,
+QFrame#frame_mis_reportes,
+QFrame#frame_ultimas_incidencias,
+QFrame#frame_ultimos_reportes {
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 10px 14px;
+}
+
+/* ---------- Títulos de sección: jerarquía #1 ---------- */
+QLabel#titulo_laboratorios,
+QLabel#titulo_equipos,
+QLabel#titulo_incidencias,
+QLabel#titulo_mis_reportes,
+QLabel#titulo_ultimos_reportes {
+    color: #1E3A8A;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+/* ---------- Valores de resumen: jerarquía #2 ---------- */
+QLabel#label_valor_laboratorios,
+QLabel#label_valor_equipos {
+    color: #0F172A;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* ---------- Encabezados y Celdas de tabla ---------- */
+QTableWidget {
+    background-color: #FFFFFF;
+    border: 1px solid #F1F5F9;
+    border-radius: 8px;
+    outline: 0;
+    selection-background-color: #EEF2FF;
+    selection-color: #1E3A8A;
+    alternate-background-color: #F8FAFC;
+}
+
+QTableWidget QHeaderView::section {
+    background-color: #F8FAFC;
+    color: #475569;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 10px 6px;
+    border: none;
+    border-bottom: 2px solid #E2E8F0;
+}
+
+QTableWidget::item {
+    padding: 8px 6px;
+    color: #1E293B;
+    font-size: 13px;
+}
+
+/* ---------- Badges de Estado ---------- */
+QLabel#badgeEstado {
+    border-radius: 10px;
+    padding: 3px 12px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+QLabel#badgeEstado[tipo_estado="pendiente"] {
+    background-color: #DBEAFE;
+    color: #1D4ED8;
+}
+
+QLabel#badgeEstado[tipo_estado="confirmado"] {
+    background-color: #DCFCE7;
+    color: #15803D;
+}
+
+QLabel#badgeEstado[tipo_estado="proceso"] {
+    background-color: #FEF3C7;
+    color: #B45309;
+}
+
+QLabel#badgeEstado[tipo_estado="resuelto"] {
+    background-color: #DCFCE7;
+    color: #15803D;
+}
+
+QLabel#badgeEstado[tipo_estado="reabierto"] {
+    background-color: #FEE2E2;
+    color: #B91C1C;
+}
+
+QLabel#badgeEstado[tipo_estado="general"] {
+    background-color: #F1F5F9;
+    color: #475569;
+}
+
+/* ---------- Lista de Reportes ---------- */
+QListWidget#lista_ultimos_reportes {
+    border: 1px solid #F1F5F9;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+}
+
+QListWidget#lista_ultimos_reportes::item {
+    padding: 10px 14px;
+    border-bottom: 1px solid #F1F5F9;
+    color: #334155;
+    font-size: 13px;
+}
+
+QListWidget#lista_ultimos_reportes::item:hover {
+    background-color: #F8FAFC;
+    border-radius: 6px;
+}
+
+QLabel[estado="reabierto"] {
+    color: #DC2626;
+    /* Rojo — ya definido en tu doc */
+}
+
+/* ---------- Pantalla Cerrar Sesión ---------- */
+QWidget#fondoCerrarSesion {
+    background-color: #F1F5F9;
+}
+
+QFrame#cerrarSesionCard {
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+}
+
+QLabel#label_cerrando_sesion {
+    color: #1E3A8A;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+QLabel#label_cerrando_subtitulo {
+    color: #64748B;
+    font-size: 13px;
+}
+
+QProgressBar#progress_cerrando_sesion {
+    border: none;
+    border-radius: 3px;
+    background-color: #E2E8F0;
+}
+
+QProgressBar#progress_cerrando_sesion::chunk {
+    background-color: #1E3A8A;
+    border-radius: 3px;
+}
+
+/* ---------- Buscador de Mis reportes ---------- */
+QWidget#buscadorReportesWidget {
+    background-color: #FFFFFF;
+    border: 1px solid #D9E2F1;
+    border-radius: 16px;
+}
+
+QLabel#tituloBuscadorReportes {
+    color: #1E3A8A;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+QLabel#etiquetaFiltrosReportes,
+QLabel#etiquetaCampoReporte {
+    color: #6B7280;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+QLineEdit#inputBuscarReportes {
+    min-height: 30px;
+    padding: 8px 14px;
+    background-color: #FFFFFF;
+    color: #1E3A8A;
+    border: 2px solid #1E3A8A;
+    border-radius: 24px;
+    font-size: 15px;
+}
+
+QLineEdit#inputBuscarReportes:focus {
+    border-color: #3B82F6;
+}
+
+QLineEdit#inputBuscarReportes::placeholder {
+    color: #6B7280;
+}
+
+QComboBox#comboLaboratorioReportes,
+QDateEdit#fechaDesdeReportes,
+QDateEdit#fechaHastaReportes {
+    min-height: 28px;
+    padding: 5px 10px;
+    background-color: #FFFFFF;
+    color: #1E3A8A;
+    border: 1px solid #AAB9D0;
+    border-radius: 8px;
+}
+
+QPushButton#chipTodos,
+QPushButton#chipPendiente,
+QPushButton#chipReportado,
+QPushButton#chipConfirmado,
+QPushButton#chipEnReparacion,
+QPushButton#chipResuelto,
+QPushButton#chipReabierto {
+    padding: 6px 12px;
+    border-radius: 14px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+QPushButton#chipTodos {
+    background-color: #FFFFFF;
+    color: #1E3A8A;
+    border: 1px solid #1E3A8A;
+}
+
+QPushButton#chipTodos:hover,
+QPushButton#chipTodos:checked { background-color: #1E3A8A; color: #FFFFFF; }
+
+QPushButton#chipPendiente,
+QPushButton#chipReportado {
+    background-color: #FFFFFF;
+    color: #2563EB;
+    border: 1px solid #3B82F6;
+}
+QPushButton#chipPendiente:hover,
+QPushButton#chipPendiente:checked,
+QPushButton#chipReportado:hover,
+QPushButton#chipReportado:checked {
+    background-color: #3B82F6;
+    color: #FFFFFF;
+}
+
+QPushButton#chipConfirmado {
+    background-color: #FFFFFF;
+    color: #15803D;
+    border: 1px solid #16A34A;
+}
+QPushButton#chipConfirmado:hover,
+QPushButton#chipConfirmado:checked { background-color: #16A34A; color: #FFFFFF; }
+
+QPushButton#chipEnReparacion {
+    background-color: #FFFFFF;
+    color: #A16207;
+    border: 1px solid #D4A017;
+}
+QPushButton#chipEnReparacion:hover,
+QPushButton#chipEnReparacion:checked { background-color: #D4A017; color: #FFFFFF; }
+
+QPushButton#chipResuelto {
+    background-color: #FFFFFF;
+    color: #15803D;
+    border: 1px solid #16A34A;
+}
+QPushButton#chipResuelto:hover,
+QPushButton#chipResuelto:checked { background-color: #16A34A; color: #FFFFFF; }
+
+QPushButton#chipReabierto {
+    background-color: #FFFFFF;
+    color: #B91C1C;
+    border: 1px solid #DC2626;
+}
+QPushButton#chipReabierto:hover,
+QPushButton#chipReabierto:checked { background-color: #DC2626; color: #FFFFFF; }
+
+QPushButton#botonLimpiarFiltrosReportes {
+    min-height: 30px;
+    padding: 6px 14px;
+    background-color: #FFFFFF;
+    color: #6B7280;
+    border: 1px solid #9CA3AF;
+    border-radius: 8px;
+}
+
+QPushButton#botonLimpiarFiltrosReportes:hover {
+    background-color: #F3F4F6;
+    color: #1E3A8A;
+    border-color: #1E3A8A;
+}
+
+/* ==========================================================================
+   TEMA VERDE - DASHBOARD TÉCNICO (#dashboardContenidoTecnico)
+   ========================================================================== */
+
+QWidget#dashboardContenidoTecnico QFrame#barra_superior {
+    background-color: #15803D;
+}
+
+QWidget#dashboardContenidoTecnico QLabel#titulo_laboratorios,
+QWidget#dashboardContenidoTecnico QLabel#titulo_equipos,
+QWidget#dashboardContenidoTecnico QLabel#titulo_mis_reportes,
+QWidget#dashboardContenidoTecnico QLabel#titulo_ultimos_reportes,
+QWidget#dashboardContenidoTecnico QLabel#tituloBuscadorReportes {
+    color: #15803D;
+}
+
+QWidget#dashboardContenidoTecnico QLineEdit#inputBuscarReportes {
+    color: #15803D;
+    border: 2px solid #15803D;
+}
+
+QWidget#dashboardContenidoTecnico QLineEdit#inputBuscarReportes:focus {
+    border-color: #16A34A;
+}
+
+QWidget#dashboardContenidoTecnico QTableWidget {
+    selection-background-color: #DCFCE7;
+    selection-color: #15803D;
+}
+
+QWidget#dashboardContenidoTecnico QPushButton#chipTodos {
+    color: #15803D;
+    border: 1px solid #15803D;
+}
+
+QWidget#dashboardContenidoTecnico QPushButton#chipTodos:hover,
+QWidget#dashboardContenidoTecnico QPushButton#chipTodos:checked {
+    background-color: #15803D;
+    color: #FFFFFF;
+}
+
+QWidget#dashboardContenidoTecnico QPushButton#botonExportarPdf {
+    background-color: #15803D;
+    color: #FFFFFF;
+}
+
+QWidget#dashboardContenidoTecnico QPushButton#botonExportarPdf:hover {
+    background-color: #166534;
+}
+
+QWidget#dashboardContenidoTecnico QPushButton#botonLimpiarFiltrosReportes:hover {
+    color: #15803D;
+    border-color: #15803D;
+}
+
+/* Botón Editar — verde en vez de azul global */
+QWidget#dashboardContenidoTecnico QPushButton#botonEditarReporte {
+    background-color: #15803D;
+    color: #FFFFFF;
+}
+
+QWidget#dashboardContenidoTecnico QPushButton#botonEditarReporte:hover {
+    background-color: #166534;
+}
+
+/* Botón de acción contextual del técnico (Tomar / Iniciar / Resolver) */
+QPushButton#botonAccionTecnico {
+    min-height: 30px;
+    padding: 6px 14px;
+    background-color: #15803D;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+QPushButton#botonAccionTecnico:hover {
+    background-color: #166534;
+}
+
+QPushButton#botonAccionTecnico:disabled {
+    background-color: #E2E8F0;
+    color: #94A3B8;
+    border: 1px solid #CBD5E1;
+}
+
+/* Botón Reasignar reporte (Técnico) */
+QPushButton#botonReasignarReporte {
+    min-height: 30px;
+    padding: 6px 14px;
+    background-color: #0284C7;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+QPushButton#botonReasignarReporte:hover {
+    background-color: #0369A1;
+}
+
+QPushButton#botonReasignarReporte:disabled {
+    background-color: #E2E8F0;
+    color: #94A3B8;
+    border: 1px solid #CBD5E1;
+}
+
+/* Botones barra superior (Registrar Incidencia + Tomar Incidencias) — texto verde y parejos */
+QWidget#dashboardContenidoTecnico QPushButton#botonRegistrarIncidencia {
+    color: #15803D;
+    border-color: #15803D;
+    padding: 9px 20px;
+    font-weight: bold;
+}
+
+QWidget#dashboardContenidoTecnico QPushButton#botonRegistrarIncidencia:hover {
+    background-color: #F0FDF4;
+    border-color: #15803D;
+}
+
+/* ==========================================================================
+   TEMA ROJO - DASHBOARD ADMINISTRADOR (#dashboardContenidoAdmin)
+   ========================================================================== */
+
+QWidget#dashboardContenidoAdmin QFrame#barra_superior {
+    background-color: #DC2626;
+}
+
+QWidget#dashboardContenidoAdmin QLabel#titulo_dashboard,
+QWidget#dashboardContenidoAdmin QLabel#tituloBarra {
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+QFrame#frame_resueltas_mes,
+QFrame#frame_dificultades,
+QFrame#frame_tipos_problema,
+QFrame#frame_distribucion_mensual,
+QFrame#frame_ultimas_incidencias,
+QFrame#frame_ultimos_reportes {
+    background-color: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+}
+
+QWidget#dashboardContenidoAdmin QLabel#tituloSeccion {
+    color: #DC2626;
+    font-size: 14px;
+    font-weight: bold;
+    background: transparent;
+}
+
+QLabel#label_valor_resueltas_mes,
+QLabel#label_valor_dificultades,
+QLabel#label_valor_laboratorios,
+QLabel#label_valor_equipos {
+    color: #1F2937;
+    font-size: 18px;
+    font-weight: bold;
+    background: transparent;
+}
+
+QLabel#mensajeSinDatos {
+    color: #6B7280;
+    background: transparent;
+}
+
+QWidget#dashboardContenidoAdmin QPushButton#botonAccesoAdmin {
+    background-color: #FFFFFF;
+    color: #DC2626;
+    border: 1px solid #DC2626;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-weight: 600;
+}
+
+QWidget#dashboardContenidoAdmin QPushButton#botonAccesoAdmin:hover {
+    background-color: #DC2626;
+    color: #FFFFFF;
+}
+
+QWidget#dashboardContenidoAdmin QPushButton#botonRegistrarIncidencia {
+    color: #DC2626;
+    border-color: #DC2626;
+    padding: 9px 20px;
+    font-weight: bold;
+}
+
+QWidget#dashboardContenidoAdmin QPushButton#botonRegistrarIncidencia:hover {
+    background-color: #FEF2F2;
+    border-color: #B91C1C;
+}
+
+QWidget#dashboardContenidoAdmin QComboBox#selectorModoVistaAdmin {
+    background-color: #FFFFFF;
+    color: #DC2626;
+    border: 1px solid #DC2626;
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-weight: bold;
+}
+
+QWidget#dashboardContenidoAdmin QComboBox#selectorModoVistaAdmin:hover {
+    border-color: #B91C1C;
+    background-color: #FEF2F2;
+}
+
+QWidget#dashboardContenidoAdmin QComboBox#selectorModoVistaAdmin QAbstractItemView {
+    background-color: #FFFFFF;
+    color: #7F1D1D;
+    selection-background-color: #FEE2E2;
+    selection-color: #991B1B;
+    border: 1px solid #FCA5A5;
+}
+
+QWidget#dashboardContenidoAdmin QComboBox#selectorModoVistaAdmin QAbstractItemView::item:hover {
+    background-color: #FEF2F2;
+    color: #991B1B;
+}
+
+QWidget#dashboardContenidoAdmin QTableWidget {
+    selection-background-color: #FEE2E2;
+    selection-color: #DC2626;
+}
+
+QWidget#dashboardContenidoAdmin QTableWidget QHeaderView::section {
+    background-color: #FEF2F2;
+    color: #DC2626;
+    font-weight: bold;
+}
+
+/* Pantalla Supervisión General de Incidencias (Administrador) */
+QWidget#listaIncidenciasAdminWidget QLabel#tituloBuscadorReportes {
+    color: #DC2626;
+}
+
+QWidget#listaIncidenciasAdminWidget QPushButton#chipTodos:checked {
+    background-color: #DC2626;
+    color: #FFFFFF;
+}
+
+QWidget#listaIncidenciasAdminWidget QTableWidget {
+    selection-background-color: #FEE2E2;
+    selection-color: #DC2626;
+}
+
+QWidget#listaIncidenciasAdminWidget QTableWidget QHeaderView::section {
+    background-color: #FEF2F2;
+    color: #DC2626;
+    font-weight: bold;
+}
+
+QWidget#listaIncidenciasAdminWidget QPushButton#botonEditarReporte,
+QWidget#listaIncidenciasAdminWidget QPushButton#botonEliminarReporte,
+QWidget#listaIncidenciasAdminWidget QPushButton#botonExportarPdf {
+    background-color: #DC2626;
+    color: #FFFFFF;
+    border: 1px solid #DC2626;
+    border-radius: 6px;
+    padding: 6px 16px;
+    font-weight: bold;
+}
+
+QWidget#listaIncidenciasAdminWidget QPushButton#botonEditarReporte:hover,
+QWidget#listaIncidenciasAdminWidget QPushButton#botonEliminarReporte:hover,
+QWidget#listaIncidenciasAdminWidget QPushButton#botonExportarPdf:hover {
+    background-color: #B91C1C;
+    border-color: #B91C1C;
+}
+
+QWidget#listaIncidenciasAdminWidget QPushButton#botonEditarReporte:disabled,
+QWidget#listaIncidenciasAdminWidget QPushButton#botonEliminarReporte:disabled,
+QWidget#listaIncidenciasAdminWidget QPushButton#botonExportarPdf:disabled {
+    background-color: #D1D5DB;
+    color: #9CA3AF;
+    border: 1px solid #CBD5E1;
+}

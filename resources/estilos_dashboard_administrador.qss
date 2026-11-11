@@ -1,0 +1,96 @@
+/* Estilos de referencia para Dashboard de Administrador (Rojo Institucional #DC2626) */
+
+QWidget#dashboardContenidoAdmin QFrame#barra_superior {
+    background-color: #DC2626;
+}
+
+QWidget#dashboardContenidoAdmin QLabel#titulo_dashboard,
+QWidget#dashboardContenidoAdmin QLabel#tituloBarra {
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+QFrame#frame_resueltas_mes,
+QFrame#frame_dificultades,
+QFrame#frame_tipos_problema,
+QFrame#frame_distribucion_mensual,
+QFrame#frame_ultimas_incidencias,
+QFrame#frame_ultimos_reportes {
+    background-color: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+}
+
+QWidget#dashboardContenidoAdmin QLabel#tituloSeccion {
+    color: #DC2626;
+    font-size: 14px;
+    font-weight: bold;
+    background: transparent;
+}
+
+QLabel#label_valor_resueltas_mes,
+QLabel#label_valor_dificultades,
+QLabel#label_valor_laboratorios,
+QLabel#label_valor_equipos {
+    color: #1F2937;
+    font-size: 18px;
+    font-weight: bold;
+    background: transparent;
+}
+
+QLabel#mensajeSinDatos {
+    color: #6B7280;
+    background: transparent;
+}
+
+QWidget#dashboardContenidoAdmin QPushButton#botonAccesoAdmin {
+    background-color: #FFFFFF;
+    color: #DC2626;
+    border: 1px solid #DC2626;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-weight: 600;
+}
+
+QWidget#dashboardContenidoAdmin QPushButton#botonAccesoAdmin:hover {
+    background-color: #DC2626;
+    color: #FFFFFF;
+}
+
+QWidget#dashboardContenidoAdmin QPushButton#botonRegistrarIncidencia {
+    color: #DC2626;
+    border-color: #DC2626;
+    padding: 9px 20px;
+    font-weight: bold;
+}
+
+QWidget#dashboardContenidoAdmin QPushButton#botonRegistrarIncidencia:hover {
+    background-color: #FEF2F2;
+    border-color: #B91C1C;
+}
+
+QWidget#dashboardContenidoAdmin QComboBox#selectorModoVistaAdmin {
+    background-color: #FFFFFF;
+    color: #DC2626;
+    border: 1px solid #DC2626;
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-weight: bold;
+}
+
+QWidget#dashboardContenidoAdmin QComboBox#selectorModoVistaAdmin:hover {
+    border-color: #B91C1C;
+    background-color: #FEF2F2;
+}
+
+QWidget#dashboardContenidoAdmin QTableWidget {
+    selection-background-color: #FEE2E2;
+    selection-color: #DC2626;
+}
+
+QWidget#dashboardContenidoAdmin QTableWidget QHeaderView::section {
+    background-color: #FEF2F2;
+    color: #DC2626;
+    font-weight: bold;
+}
